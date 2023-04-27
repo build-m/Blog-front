@@ -1,6 +1,6 @@
 {
   "name": "new-app",
-  "proxy": "http://localhost:5000",
+  "proxy": "https://surablogs.onrender.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
