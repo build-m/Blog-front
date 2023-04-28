@@ -13,7 +13,7 @@ export default function CreatePost() {
    const [content, setContent] = useState('')
    const [images, setImages] = useState('')
    
-   const baseurl = 'https://uptight-plum-pleat.cyclic.app'
+//    const baseurl = 'https://uptight-plum-pleat.cyclic.app'
    
 
    const modules = { 
@@ -41,7 +41,7 @@ const createPost = async (event) =>{
     
     //if error occurs in axios set {headers:{ 'content-type': 'multipart/form-data' }} 
     // { withCredentials: true } sends saved cookies during login to the server
-    await Axios.post(baseurl + '/createpost',formData, { withCredentials: true } )
+    await Axios.post('https://uptight-plum-pleat.cyclic.app/createpost',formData, { withCredentials: true } )
     .then(response => {
         navigate('/') 
     })
