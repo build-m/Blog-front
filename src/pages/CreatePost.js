@@ -12,6 +12,8 @@ export default function CreatePost() {
    const [summary, setSummary] = useState('')
    const [content, setContent] = useState('')
    const [images, setImages] = useState('')
+   
+   const baseurl = 'https://surablogs.onrender.com'
 
    const modules = { 
     toolbar:[
@@ -38,7 +40,7 @@ const createPost = async (event) =>{
     
     //if error occurs in axios set {headers:{ 'content-type': 'multipart/form-data' }} 
     // { withCredentials: true } sends saved cookies during login to the server
-    await Axios.post('/createpost',formData, { withCredentials: true } )
+    await Axios.post(baseurl + '/createpost',formData, { withCredentials: true } )
     .then(response => {
         navigate('/') 
     })
