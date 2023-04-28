@@ -9,17 +9,13 @@ import { userContext } from '../context/UserContext';
 
 export default function Header() {
   const {user,setUser} = useContext(userContext)
+  
+  const baseurl = 'https://surablogs.onrender.com'
 
-// useEffect(async ()=>{
-//     if(user){
-//       const {data} = await Axios.get('/profile',{withCredentials: true})
-//       setUser(data.email)
-//       console.log('logged-in')
-//     }
-// }, [])
+
 
 const logout = async () =>{
- await Axios.post('/logout',{withCredentials: true})
+ await Axios.post(baseurl + '/logout',{withCredentials: true})
  setUser(null)
  localStorage.removeItem('userInfo')
 }
