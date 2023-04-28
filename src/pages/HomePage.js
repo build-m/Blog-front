@@ -9,14 +9,16 @@ export default function HomePage() {
   const [posts,setPosts] = useState([]) // should be empty array to receive result array
   const [author, setAuthor] = useState('') 
   
+  const baseurl = 'https://surablogs.onrender.com'
+  
 
   useEffect(()=>{
   const info = async () => {
     try {
-    let result =  await Axios.get('/post')
+    let result =  await Axios.get(baseurl + '/post')
     setPosts(result.data)
     if(user !== null){
-    let author =  await Axios.get(`/author/${user.id}`)
+    let author =  await Axios.get(baseurl + `/author/${user.id}`)
     setAuthor(author.data)
     }
     } catch (error) {
