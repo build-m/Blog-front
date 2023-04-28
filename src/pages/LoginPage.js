@@ -16,7 +16,7 @@ export default function LoginPage() {
 
    const {setUser} = useContext(userContext)
    
-   const baseurl = 'https://surablogs.onrender.com'
+   const baseurl = 'https://uptight-plum-pleat.cyclic.app'
 
 
    //REGISTER
