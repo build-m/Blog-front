@@ -13,12 +13,14 @@ export default function SpecificPost() {
        const {user} = useContext(userContext)
        const [post,setPost] = useState('')
        const {id} = useParams();
+       
+       const baseurl = 'https://surablogs.onrender.com'
 
 
        useEffect(()=>{
         const info = async () => {
             try {
-              let result =  await axios.get(`/post/${id}`) 
+              let result =  await axios.get(baseurl + `/post/${id}`) 
               console.log(user)         
               setPost(result.data)
             } catch (error) {
@@ -35,7 +37,7 @@ export default function SpecificPost() {
 const delConfirm = async () => {
    const result = window.confirm("Are you sure you want to delete");
    if (result) {
-    await axios.delete(`/delete/${id}`, { withCredentials: true })
+    await axios.delete(baseurl + `/delete/${id}`, { withCredentials: true })
     navigate('/') 
     console.log("You click yes!");
      return;
