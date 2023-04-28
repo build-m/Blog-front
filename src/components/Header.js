@@ -10,7 +10,7 @@ import { userContext } from '../context/UserContext';
 export default function Header() {
   const {user,setUser} = useContext(userContext)
   
-  const baseurl = 'https://surablogs.onrender.com'
+  const baseurl = 'https://uptight-plum-pleat.cyclic.app'
 
 
 
