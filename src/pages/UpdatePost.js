@@ -15,6 +15,9 @@ export default function EditPost() {
        const [images, setImages] = useState('')
        const [author,setAuthor] = useState('')
        const {id} = useParams();
+       
+       
+       const baseurl = 'https://surablogs.onrender.com'
 
        const modules = { 
         toolbar:[
@@ -35,7 +38,7 @@ export default function EditPost() {
     useEffect(()=>{
         const info = async () => {
             try {
-              let result =  await axios.get(`/post/${id}`)
+              let result =  await axios.get(baseurl + `/post/${id}`)
               setAuthor(result.data.author._id)          
               setTitle(result.data.title)
               setSummary(result.data.summary)
@@ -57,7 +60,7 @@ export default function EditPost() {
           // images?.[0] && formData.set('image', images?.[0])//if imagess[0] is not null
           formData.set('image', images[0])
           
-          await Axios.put(`/updatePost/${id}`,formData, { withCredentials: true } )
+          await Axios.put(baseurl + `/updatePost/${id}`,formData, { withCredentials: true } )
           .then(response => {
               console.log(response)
               navigate(`/post/${id}`) 
