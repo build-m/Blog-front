@@ -21,11 +21,7 @@ export default function LoginPage() {
    const register = async (e)=>{ 
        e.preventDefault();
        try {
-		// await fetch('http://localhost:5000/login', {
-		// 	method : 'POST',
-		// 	body: JSON.stringify(logEmail, logPass),
-		// 	headers: { 'Content-Type': 'application/json'}
-		// })
+		
 		 await Axios.post('/register', {
 			 name:regName,
              email:regEmail,
@@ -33,7 +29,7 @@ export default function LoginPage() {
       });
 	  toast.success("Successfully registered!")
 	   } catch (error) {
-		toast.error(error.response.data);
+		toast.error('Invalid email or password-make it unique');
 	   }
    }
 
