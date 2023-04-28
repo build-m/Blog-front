@@ -13,7 +13,7 @@ export default function CreatePost() {
    const [content, setContent] = useState('')
    const [images, setImages] = useState('')
    
-   const baseurl = 'https://surablogs.onrender.com'
+   const baseurl = 'https://uptight-plum-pleat.cyclic.app'
 
    const modules = { 
     toolbar:[
