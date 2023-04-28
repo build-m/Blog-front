@@ -15,6 +15,8 @@ export default function LoginPage() {
    const [regPass, setRegPass] = useState('')
 
    const {setUser} = useContext(userContext)
+   
+   const baseurl = 'https://surablogs.onrender.com/'
 
 
    //REGISTER
@@ -22,7 +24,7 @@ export default function LoginPage() {
        e.preventDefault();
        try {
 		
-		 await Axios.post('/register', {
+		 await Axios.post(baseurl + '/register', {
 	     name:regName,
              email:regEmail,
              password:regPass
@@ -37,7 +39,7 @@ export default function LoginPage() {
    const login = async (e) =>{
      e.preventDefault();
 	 try {		
-		const { data } = await Axios.post('/login', {
+		const { data } = await Axios.post(baseurl + '/login', {
              email:logEmail,
              password:logPass 
       }, { withCredentials: true }); //this sends saved cookies in the browser to the server 
