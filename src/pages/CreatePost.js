@@ -13,7 +13,7 @@ export default function CreatePost() {
    const [content, setContent] = useState('')
    const [images, setImages] = useState('')
    
-//    const baseurl = 'https://uptight-plum-pleat.cyclic.app'
+//    const baseurl = 'https://gold-graceful-squid.cyclic.app'
    
 
    const modules = { 
