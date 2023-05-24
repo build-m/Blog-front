@@ -17,7 +17,7 @@ export default function EditPost() {
        const {id} = useParams();
        
        
-       const baseurl = 'https://surablogs.netlify.app'
+       const baseurl = 'https://suraf-blogs.netlify.app'
 
        const modules = { 
         toolbar:[
