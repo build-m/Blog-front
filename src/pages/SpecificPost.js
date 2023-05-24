@@ -14,7 +14,7 @@ export default function SpecificPost() {
        const [post,setPost] = useState('')
        const {id} = useParams();
        
-       const baseurl = 'https://surablogs.netlify.app'
+       const baseurl = 'https://suraf-blogs.netlify.app'
 
 
        useEffect(()=>{
