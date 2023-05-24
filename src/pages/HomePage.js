@@ -9,7 +9,7 @@ export default function HomePage() {
   const [posts,setPosts] = useState([]) // should be empty array to receive result array
   const [author, setAuthor] = useState('') 
   
-  const baseurl = 'https://uptight-plum-pleat.cyclic.app'
+  const baseurl = 'https://gold-graceful-squid.cyclic.app'
   
 
   useEffect(()=>{
