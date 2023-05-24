@@ -16,7 +16,7 @@ export default function LoginPage() {
 
    const {setUser} = useContext(userContext)
    
-   const baseurl = 'https://uptight-plum-pleat.cyclic.app'
+   const baseurl = 'https://gold-graceful-squid.cyclic.app'
 
 
    //REGISTER
