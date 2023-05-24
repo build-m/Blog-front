@@ -21,7 +21,7 @@ export default function SpecificPost() {
         const info = async () => {
             try {
               let result =  await axios.get(baseurl + `/post/${id}`) 
-//               console.log(user)         
+              console.log(user)         
               setPost(result.data)
             } catch (error) {
               console.log(error)
