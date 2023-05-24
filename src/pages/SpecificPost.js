@@ -14,7 +14,7 @@ export default function SpecificPost() {
        const [post,setPost] = useState('')
        const {id} = useParams();
        
-       const baseurl = 'https://gold-graceful-squid.cyclic.app'
+       const baseurl = 'https://surablogs.netlify.app'
 
 
        useEffect(()=>{
