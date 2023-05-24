@@ -20,7 +20,7 @@ export default function SpecificPost() {
        useEffect(()=>{
         const info = async () => {
             try {
-              let result =  await axios.get(baseurl + `/post/${id}`) 
+              let result =  await axios.get(baseurl + `/post/:${id}`) 
               console.log(user)         
               setPost(result.data)
             } catch (error) {
