@@ -17,7 +17,7 @@ export default function EditPost() {
        const {id} = useParams();
        
        
-       const baseurl = 'https://surablogs.onrender.com'
+       const baseurl = 'https://gold-graceful-squid.cyclic.app'
 
        const modules = { 
         toolbar:[
